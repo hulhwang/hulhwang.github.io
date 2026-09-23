@@ -81,6 +81,14 @@ body {
   margin-top: 2px;   /* 위쪽 여백 조금 추가해서 조금 아래로 위치 */
 }
 
+
+.coauthor {
+  font-weight: 400;
+  font-size: 0.95rem;
+  margin-left: 0.4rem;
+}
+
+
 /* Research subsection headings */
 #research h3 {
   font-size: 1.1rem;
@@ -88,12 +96,6 @@ body {
   color: #555;
   margin-top: 1.2rem;
   margin-bottom: 0.8rem;
-}
-
-.coauthor {
-  font-weight: 400;
-  font-size: 0.95rem;
-  margin-left: 0.4rem;
 }
 
 /* 홀수 섹션, 짝수 섹션 배경색을 다르게 */
