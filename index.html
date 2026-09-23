@@ -1,10 +1,326 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Hul Hwang</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hul Hwang </title>
+  <meta name="description" content="Hul Hwang, PhD candidate in Economics at Iowa State University. Research on U.S. corn-ethanol industry shakeout, dynamic exit games." />
+  <meta name="author" content="Hul Hwang" />
+
+  <!-- Minimal Bootstrap + icons (Nicole style uses Bootstrap layout) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
+  <style>
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #111;
+    }
+    a{ color:#2962ff; }
+    a:hover{ text-decoration: underline; }
+
+    /* Nicole-like top nav */
+    .navbar{
+      border-bottom: 1px solid #e6e6e6;
+      background: #fff;
+    }
+    .nav-link{ color:#333 !important; }
+    .nav-link:hover{ color:#000 !important; }
+
+    /* About hero */
+    #profile .avatar{
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #e6e6e6;
+    }
+    .portrait-title h2{ margin-top: 12px; font-size: 1.6rem; }
+    .portrait-title h3{ font-size: 1.05rem; color:#555; margin-bottom: 0; }
+
+    .network-icon{
+      list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+    }
+    .network-icon a{
+      font-size: 1.6rem;
+      color:#333;
+    }
+    .network-icon a:hover{ color:#000; }
+
+    section{
+      padding: 36px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    section h1{
+      font-size: 1.55rem;
+      margin-bottom: 10px;
+    }
+    .section-heading{
+      margin-bottom: 8px;
+    }
+    .muted{ color:#555; }
+    .paper-title{
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .paper-abstract{
+      margin-bottom: 8px;
+    }
+    footer{
+      padding: 18px 0;
+      color:#666;
+      font-size: .95rem;
+    }
+  </style>
 </head>
-<body>
-    <h1>Hul Hwang</h1>
-    <p>Ph.D. Candidate in Economics, Iowa State University</p>
+
+<body data-spy="scroll" data-target="#navbar-main" data-offset="70">
+
+<!-- NAVBAR -->
+<nav id="navbar-main" class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#top">Hul Hwang</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-content" class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="https://drive.google.com/file/d/1pxxc8RSh7oLLme3FrnYkLnKpIe_RZs9x/view?usp=share_link" target="_blank" rel="noopener noreferrer">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+        <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+      
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ABOUT / BIOGRAPHY -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <!-- Left: photo + quick links -->
+      <div class="col-12 col-lg-4 text-center" id="profile">
+        <img class="avatar" src="contents/Hul.jpg" alt="Hul Hwang">
+        <div class="portrait-title">
+          <h2>Hul Hwang</h2>
+          <h3>PhD candidate in Economics</h3>
+          <h3>Iowa State University</h3>
+        </div>
+
+        <ul class="network-icon" aria-hidden="true">
+          <li><a href="mailto:hhwang@iastate.edu" title="Email"><i class="fas fa-envelope"></i></a></li>
+          <li><a href="https://drive.google.com/file/d/1pxxc8RSh7oLLme3FrnYkLnKpIe_RZs9x/view?usp=share_link" target="_blank" rel="noopener noreferrer" title="CV">CV</a></li>
+        </ul>
+      </div>
+
+      <!-- Right: biography + interests + education -->
+      <div class="col-12 col-lg-8">
+        <h1>Welcome !</h1>
+        <p>
+          I am a PhD candidate in economics at Iowa State University. I study industrial
+          organization and environmental &amp; energy economics, with an emphasis on industry dynamics
+          and dynamic games. My dissertation examines the long-run decline of the U.S. corn-ethanol
+          industry using a dynamic structural model and counterfactual policy simulations. I am on the job market for 2025-2026.
+        </p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Interests</h3>
+            <ul>
+              <li>Industrial Organization</li>
+              <li>Environmental &amp; Energy Economics</li>
+              <li>Agricultural &amp; Resource Economics</li>
+            </ul>
+          </div>
+
+        <div class="col-md-6">
+          <h3>Education</h3>
+          <ul class="education-list">
+            <li class="edu-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div class="edu-text">
+                <span class="degree">Ph.D. in Economics, Expected 2027</span><br/>
+                <span class="institution">Iowa State University</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div class="edu-text">
+                <span class="degree">M.A. in Economics, 2019</span><br/>
+                <span class="institution">Sungkyunkwan University</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div class="edu-text">
+                <span class="degree">B.A. in Economics, 2017</span><br/>
+                <span class="institution">Sungkyunkwan University</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-lg-4 section-heading">
+        <h1>Research</h1>
+      </div>
+
+      <div class="col-12 col-lg-8">
+
+        <!-- JOB MARKET PAPER -->
+        <div class="mb-5">
+          <div class="paper-title">
+            When Mandates Outlive Markets: Selective Exit under Declining Demand in the U.S. Ethanol Industry
+          </div>
+
+          <p><strong>Job Market Paper</strong></p>
+
+          <p class="paper-abstract">
+            This paper studies how the U.S. corn ethanol industry would adjust to a projected decline
+            in gasoline demand and how changes in the ethanol blending mandate alter the pace and
+            distributional consequences of that adjustment. I develop a dynamic model of ethanol plant
+            production and exit in which plant scale and spatial heterogeneity in local corn supply shape
+            production costs and exit incentives. The model predicts a highly uneven geographic shakeout.
+            Exit occurs earlier among larger plants, especially in areas with lower local corn density.
+            Consequently, expected active capacity by 2050 falls by 99.4 percent in North Dakota compared
+            with 16.6 percent in Iowa. Raising the blend mandate from 10 to 12 percent slows the shakeout
+            and increases expected active years by 5.7 years on average. The resulting increase in producer
+            surplus is smaller than the additional compliance expenditure passed through to fuel consumers.
+            Among ethanol plants, surplus gains accrue disproportionately to inframarginal plants, whereas
+            the largest exit delays occur among plants near the exit threshold. Keeping these plants active
+            sustains local corn demand, shifting a larger share of the policy gains to local corn producers.
+          </p>
+
+          <p>
+            <a href="https://drive.google.com/file/d/1fnopIACbI3KGC-nMt4AQJcIOKfGvtlNI/view?usp=share_link"
+               target="_blank"
+               rel="noopener noreferrer">
+              Draft (PDF)
+            </a>
+          </p>
+        </div>
+
+
+        <!-- WORK IN PROGRESS -->
+        <div class="mb-3">
+          <h3>Work in Progress</h3>
+        </div>
+
+        <div class="mb-4">
+          <div class="paper-title">
+            Subsidy Competition under a Quota: The U.S. Ethanol Industry in Decline
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="paper-title">
+            The Data Center Boom and Surface Water Quality
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="paper-title">
+            Stock Density in Continuous Space and Time: An Application to West Coast Groundfish
+          </div>
+          <p>with Quinn Weninger</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaching  -->
+
+<section id="teaching">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-4 section-heading">
+        <h1>Teaching</h1>
+      </div>
+      <div class="col-12 col-lg-8">
+        <h3>Iowa State University, Department of Economics</h3>
+        <ul class="teaching-list">
+          <li><strong>Lab Instructor</strong><br/>
+            ECON 301 Intermediate Microeconomics — Spring 2024<br/>
+            ECON 302 Intermediate Macroeconomics — Spring 2021<br/>
+            ECON 102 Principles of Macroeconomics — Fall 2020
+          </li>
+          <li><strong>Guest Lecture</strong><br/>
+            ECON 380 Energy, Environmental & Resource Economics — Spring 2026, Spring 2025, Fall 2023, Spring 2023, Spring 2022, Spring 2021
+          </li>
+          <li><strong>Teaching Assistant</strong><br/>
+            ECON 101 Principles of Microeconomics — Fall 2024, Fall 2022, Fall 2021, Fall 2020, Spring 2020, Fall 2019<br/>
+            ECON 694 Research Workshop — Fall 2023<br/>
+            ECON 380 Energy, Environmental & Resource Economics — Fall 2023, Spring 2023, Spring 2022, Spring 2021<br/>
+            ECON 230 Farm Business Management — Spring 2023<br/>
+            ECON 235 Introduction to Agricultural Markets — Fall 2022<br/>
+            ECON 271X Introduction to Data Analysis in Agri-Food Industry — Spring 2022<br/>
+            ECON 102 Principles of Macroeconomics — Fall 2021
+          </li>
+        </ul>
+
+        <h3>Sungkyunkwan University, Department of Economics (2017–2018)</h3>
+        <ul class="teaching-list">
+          <li><strong>Teaching Assistant</strong><br/>
+            Graduate: Macroeconomics I<br/>
+            Undergraduate: Foreign Exchange Market; International Finance; International Monetary Economics
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-4 section-heading">
+        <h1>Contact</h1>
+      </div>
+      <div class="col-12 col-lg-8">
+        <ul>
+          <li>Email: <a href="mailto:hhwang@iastate.edu">hhwang@iastate.edu</a></li>
+          <li>Phone: +1 (515) 230-8312</li>
+          <li>
+            Department of Economics, Iowa State University<br/>
+            67 Heady Hall, 518 Farm House Lane<br/>
+            Ames, IA 50011-1054, USA
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="container">
+  Updated: September 2026.
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
