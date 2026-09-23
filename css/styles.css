@@ -1,0 +1,91 @@
+.education-list {
+  list-style: none;
+  padding-left: 0;
+}
+.edu-item {
+  display: flex;
+  align-items: center; /* 아이콘과 텍스트 수직 가운데 정렬 */
+  margin-bottom: 0.9rem;
+}
+.edu-item i {
+  margin-right: 10px;
+  color: #000;
+  font-size: 1.2rem;
+}
+.edu-text .degree {
+  color: #000;
+  font-size: 1.05rem;
+}
+.edu-text .institution {
+  color: #666;
+  font-size: 0.92rem;
+}
+.navbar .navbar-brand {
+  font-size: 1.6rem; /* 원하는 크기로 조정 */
+  font-weight: 700;  /* 볼드 유지 */
+}
+body {
+  font-family: 'Inter', system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+
+.portrait-title h2 {
+  font-weight: 400; /* 굵기 가늘게 */
+  font-size: 1.4rem; /* 조금 작게 */
+  color: #111;
+}
+.portrait-title h3 {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #555;
+}
+
+.teaching-list {
+  list-style: none;
+  padding-left: 0;
+}
+.teaching-list li {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.teaching-list li strong {
+  font-weight: 600;
+}
+/* Teaching 섹션 기관명 스타일 */
+#teaching h3 {
+  font-size: 1.1rem;    /* 작게 설정 */
+  font-weight: 400;     /* 보통 굵기 */
+  color: #777;          /* 연한 회색 */
+  margin-top: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.education-list li .degree {
+  color: #000;
+  font-size: 1.05rem;
+}
+
+.education-list li .institution {
+  color: #666;
+  font-size: 0.9rem;  /* 글씨크기 약간 더 작게 */
+  margin-top: 2px;   /* 위쪽 여백 조금 추가해서 조금 아래로 위치 */
+}
+
+.education-list li .degree {
+  color: #000;
+  font-size: 1.05rem;
+}
+
+.education-list li .institution {
+  color: #666;
+  font-size: 0.9rem;  /* 글씨크기 약간 더 작게 */
+  margin-top: 2px;   /* 위쪽 여백 조금 추가해서 조금 아래로 위치 */
+}
+
+
+/* 홀수 섹션, 짝수 섹션 배경색을 다르게 */
+section:nth-of-type(odd) {
+  background-color: #fafbfc; /* 밝은 회색톤 */
+}
+section:nth-of-type(even) {
+  background-color: #ffffff; /* 흰색 */
+}
