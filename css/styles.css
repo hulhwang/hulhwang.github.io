@@ -90,6 +90,12 @@ body {
   margin-bottom: 0.8rem;
 }
 
+.coauthor {
+  font-weight: 400;
+  font-size: 0.95rem;
+  margin-left: 0.4rem;
+}
+
 /* 홀수 섹션, 짝수 섹션 배경색을 다르게 */
 section:nth-of-type(odd) {
   background-color: #fafbfc; /* 밝은 회색톤 */
