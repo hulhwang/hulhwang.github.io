@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
   <style>
     body{
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
       color: #111;
     }
@@ -84,13 +83,13 @@
   </style>
 </head>
 
-<body data-spy="scroll" data-target="#navbar-main" data-offset="70">
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="70">
 
 <!-- NAVBAR -->
 <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light sticky-top">
   <div class="container">
     <a class="navbar-brand" href="#top">Hul Hwang</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -123,8 +122,8 @@
           <h3>Iowa State University</h3>
         </div>
 
-        <ul class="network-icon" aria-hidden="true">
-          <li><a href="mailto:hhwang@iastate.edu" title="Email"><i class="fas fa-envelope"></i></a></li>
+        <ul class="network-icon">
+          <li><a href="mailto:hhwang@iastate.edu" title="Email" aria-label="Email Hul Hwang"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
           <li><a href="https://drive.google.com/file/d/1pxxc8RSh7oLLme3FrnYkLnKpIe_RZs9x/view?usp=share_link" target="_blank" rel="noopener noreferrer" title="CV">CV</a></li>
         </ul>
         
@@ -136,7 +135,7 @@
       <div class="col-12 col-lg-8">
         <h1>Welcome !</h1>
         <p>
-          I am a PhD candidate in Economics at Iowa State University. I am an applied microeconomist whose research covers a range of topics in Industrial Organization, Environmental and Energy Economics, and Agricultural and Resource Economics. My research focuses on how industries adjust to long-run changes in demand and policy, and on the economic and environmental consequences of those adjustments. I will be on the 2026-2027 job market.
+          I am a PhD candidate in Economics at Iowa State University. I am an applied microeconomist whose research covers a range of topics in Industrial Organization, Environmental and Energy Economics, and Agricultural and Resource Economics. My research focuses on how industries adjust to long-run changes in demand and policy, and on the economic and environmental consequences of those adjustments. I am on the 2026–2027 academic job market.
         </p>
 
         <div class="row">
@@ -175,7 +174,7 @@
             </li>
           </ul>
         </div>
-        </p>
+        </div>
       </div>
     </div>
   </div>
@@ -187,11 +186,11 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-12 col-lg-4 section-heading">
+      <div class="col-12 col-lg-3 section-heading">
         <h1>Research</h1>
       </div>
 
-      <div class="col-12 col-lg-8">
+      <div class="col-12 col-lg-9">
 
         <!-- JOB MARKET PAPER -->
         <div class="mb-5">
@@ -261,9 +260,9 @@
         <div class="mb-5">
           <div class="paper-title">
             Stock Density in Continuous Space and Time: An Application to West Coast Groundfish
-            <span class="coauthor">with Quinn Weninger</span>
+          </div>
+          <p class="coauthor">with Quinn Weninger</p>
         </div>
-      </div>
           
         <!-- OTHER REFEREED JOURNAL ARTICLES -->
         <div class="mb-3">
@@ -273,10 +272,9 @@
         <div class="mb-4">
           <div class="paper-title">
             Analyzing Determinants of Labor Income Share Fluctuations in Korea
-            <span class="coauthor">with Sunghyun Henry Kim</span>
           </div>
+          <p class="coauthor">with Sunghyun Henry Kim</p>
             <em>The Korean Journal of Economic Studies</em>, 67(4), 139–171, 2019.
-          </p>
 
           <p>
             <a href="https://doi.org/10.22841/kjes.2019.67.4.005"
@@ -297,10 +295,10 @@
 <section id="teaching">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-4 section-heading">
+      <div class="col-12 col-lg-3 section-heading">
         <h1>Teaching</h1>
       </div>
-      <div class="col-12 col-lg-8">
+      <div class="col-12 col-lg-9">
         <h3>Iowa State University, Department of Economics</h3>
         <ul class="teaching-list">
           <li><strong>Lab Instructor</strong><br/>
@@ -338,10 +336,10 @@
 <section id="contact">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-4 section-heading">
+      <div class="col-12 col-lg-3 section-heading">
         <h1>Contact</h1>
       </div>
-      <div class="col-12 col-lg-8">
+      <div class="col-12 col-lg-9">
         <ul>
           <li>Email: <a href="mailto:hhwang@iastate.edu">hhwang@iastate.edu</a></li>
           <li>Phone: +1 (515) 230-8312</li>
@@ -357,7 +355,7 @@
 </section>
 
 <footer class="container">
-  Updated: September 2026.
+  Updated: October 2026.
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
