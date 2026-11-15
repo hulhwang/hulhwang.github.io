@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hul Hwang </title>
-  <meta name="description" content="Hul Hwang, PhD candidate in Economics at Iowa State University." />
+  <title>Hul Hwang</title>
+  <meta name="description" content="Hul Hwang, Ph.D. candidate in Economics at Iowa State University." />
   <meta name="author" content="Hul Hwang" />
   <meta name="google-site-verification" content="cupngoSBUZugvoQPcG6rloAyteE7jlBpwj9AbZ5wrpE" />
 
@@ -16,69 +16,105 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
   <style>
+    :root{
+      --accent:#111;
+      --accent-soft:#f6f6f6;
+      --link:#111;
+      --ink:#111;
+      --muted:#555;
+      --line:#e6e6e6;
+      --bg:#fff;
+    }
+    html{ scroll-behavior:smooth; scroll-padding-top:72px; }
     body{
-      line-height: 1.6;
-      color: #111;
+      font-family:'Inter',system-ui,-apple-system,Roboto,Arial,sans-serif;
+      line-height:1.7;
+      color:var(--ink);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
     }
-    a{ color:#2962ff; }
-    a:hover{ text-decoration: underline; }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ color:var(--link); text-decoration:underline; }
+    h3{ font-size:1.05rem; font-weight:600; letter-spacing:.01em; }
 
+    /* NAV */
     .navbar{
-      border-bottom: 1px solid #e6e6e6;
-      background: #fff;
+      background:rgba(255,255,255,.85);
+      backdrop-filter:saturate(180%) blur(10px);
+      -webkit-backdrop-filter:saturate(180%) blur(10px);
+      border-bottom:1px solid var(--line);
     }
-    .nav-link{ color:#333 !important; }
-    .nav-link:hover{ color:#000 !important; }
+    .navbar .navbar-brand{ font-size:1.25rem; font-weight:700; letter-spacing:-.01em; color:var(--ink); }
+    .nav-link{ color:var(--muted) !important; font-weight:500; font-size:.95rem; padding:.5rem .9rem !important; }
+    .nav-link:hover, .nav-link.active{ color:#000 !important; }
 
-    /* About hero */
+    /* HERO */
+    #about{
+      background:#fff;
+      padding:64px 0 56px;
+      border-bottom:1px solid var(--line);
+    }
     #profile .avatar{
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 1px solid #e6e6e6;
+      width:200px; height:200px; object-fit:cover; border-radius:50%;
+      border:4px solid #fff;
+      box-shadow:0 0 0 1px var(--line),0 10px 30px rgba(15,23,42,.12);
     }
-    .portrait-title h2{ margin-top: 12px; font-size: 1.6rem; }
-    .portrait-title h3{ font-size: 1.05rem; color:#555; margin-bottom: 0; }
-
-    .network-icon{
-      list-style: none;
-      padding-left: 0;
-      margin-top: 10px;
-      display:flex;
-      gap:10px;
-      justify-content:center;
-    }
+    .portrait-title h2{ margin-top:18px; font-size:1.5rem; font-weight:700; letter-spacing:-.01em; color:var(--ink); }
+    #about .portrait-title h3{ font-size:.95rem; font-weight:400; color:var(--muted); margin:0 0 2px; text-transform:none; letter-spacing:0; }
+    .network-icon{ list-style:none; padding-left:0; margin-top:16px; display:flex; gap:10px; justify-content:center; }
     .network-icon a{
-      font-size: 1.6rem;
-      color:#333;
+      display:inline-flex; align-items:center; justify-content:center;
+      min-width:42px; height:42px; padding:0 14px; border-radius:999px;
+      background:#fff; border:1px solid var(--line); color:var(--ink);
+      font-size:.95rem; font-weight:600; transition:all .15s ease;
     }
-    .network-icon a:hover{ color:#000; }
+    .network-icon a:hover{ background:#111; color:#fff; border-color:#111; text-decoration:none; transform:translateY(-1px); }
 
-    section{
-      padding: 36px 0;
-      border-bottom: 1px solid #f0f0f0;
+    #about h1{ font-size:2.1rem; font-weight:700; letter-spacing:-.02em; margin-bottom:14px; }
+    #about h3{
+      font-size:.78rem; text-transform:uppercase; letter-spacing:.12em;
+      color:var(--accent); font-weight:700; margin:22px 0 10px;
     }
-    section h1{
-      font-size: 1.55rem;
-      margin-bottom: 10px;
+    #about ul:not(.education-list){ padding-left:1.1rem; color:#334155; }
+    #about ul:not(.education-list) li{ margin-bottom:2px; }
+    .edu-item i{ color:var(--accent); }
+    .edu-text .degree{ font-weight:600; color:var(--ink); }
+
+    /* SECTIONS */
+    section:not(#about){ padding:56px 0; border-bottom:1px solid var(--line); background:#fff; }
+    
+    section h1{ font-size:.82rem; text-transform:uppercase; letter-spacing:.14em; color:var(--accent); font-weight:700; margin-bottom:10px; }
+    .section-heading{ margin-bottom:8px; }
+    .muted{ color:var(--muted); }
+
+    /* PAPERS */
+    #research h3{
+      font-size:.78rem; text-transform:uppercase; letter-spacing:.12em;
+      color:var(--muted); font-weight:700; margin:28px 0 14px;
+      padding-bottom:8px; border-bottom:1px solid var(--line);
     }
-    .section-heading{
-      margin-bottom: 8px;
+    #research .col-lg-10 > .mb-3:first-child h3{ margin-top:0; }
+    .paper-card, #research .mb-3, #research .mb-4, #research .mb-5{ margin-bottom:1rem !important; }
+    .paper-title{ font-size:1rem; line-height:1.4; margin-bottom:6px; font-weight:600; }
+    .paper-title a{ color:var(--ink); }
+    
+    .badge-jmp{
+      display:inline-block; font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+      color:#fff; background:#111; padding:3px 9px; border-radius:999px; margin-bottom:8px;
     }
-    .muted{ color:#555; }
-    .paper-title{
-      font-size: 1.15rem;
-      margin-bottom: 6px;
-      font-weight: 600;
+    .coauthor{ color:var(--muted); font-size:.92rem; margin-bottom:4px; }
+     .paper-abstract{ margin:8px 0 14px; color:#333; font-size:.95rem; text-align:left; }
+    .paper-links{ display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 10px; }
+    .paper-links a{
+      display:inline-flex; align-items:center; gap:6px; font-size:.85rem; font-weight:600;
+      color:var(--link); border:1px solid var(--link); border-radius:6px; padding:3px 12px;
     }
-    .paper-abstract{
-      margin-bottom: 8px;
-    }
-    footer{
-      padding: 18px 0;
-      color:#666;
-      font-size: .95rem;
+    .paper-links a:hover{ background:var(--link); color:#fff; text-decoration:none; }
+
+    @media (max-width:991px){
+      #about{ padding:40px 0; }
+      #profile{ margin-bottom:28px; }
+      #about h1{ font-size:1.7rem; }
     }
   </style>
 </head>
@@ -118,7 +154,7 @@
         <img class="avatar" src="contents/Hul.jpg" alt="Hul Hwang">
         <div class="portrait-title">
           <h2>Hul Hwang</h2>
-          <h3>PhD candidate in Economics</h3>
+          <h3>Ph.D. candidate in Economics</h3>
           <h3>Iowa State University</h3>
         </div>
 
@@ -135,7 +171,7 @@
       <div class="col-12 col-lg-8">
         <h1>Welcome !</h1>
         <p>
-          I am a PhD candidate in Economics at Iowa State University. I am an applied microeconomist whose research covers a range of topics in Industrial Organization, Environmental and Energy Economics, and Agricultural and Resource Economics. My research focuses on how industries adjust to long-run changes in demand and policy, and on the economic and environmental consequences of those adjustments. I am on the 2026–2027 academic job market.
+          I am a Ph.D. candidate in Economics at Iowa State University. I am an applied microeconomist whose research covers a range of topics in Industrial Organization, Environmental and Energy Economics, and Agricultural and Resource Economics. My research focuses on how industries adjust to long-run changes in demand and policy, and on the economic and environmental consequences of those adjustments. I am on the 2026-2027 academic job market.
         </p>
 
         <div class="row">
@@ -187,31 +223,25 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-12 col-lg-3 section-heading">
+      <div class="col-12 col-lg-2 section-heading">
         <h1>Research</h1>
       </div>
 
-      <div class="col-12 col-lg-9">
+      <div class="col-12 col-lg-10">
 
         <!-- JOB MARKET PAPER -->
-        <div class="mb-5">
-          <div class="paper-title">
-            When Mandates Outlive Markets: Selective Exit under Declining Demand in the U.S. Ethanol Industry
-          </div>
+        <div class="mb-3">
+          <h3>Job Market Paper</h3>
+        </div>
 
-          <p><strong>Job Market Paper</strong></p>
+        <div class="mb-4">
+          <div class="paper-title">When Mandates Outlive Markets: Selective Exit under Declining Demand in the U.S. Ethanol Industry</div>
+
 
           <p class="paper-abstract">
-            This paper studies how the U.S. corn ethanol industry would adjust to a projected decline in gasoline demand and how the ethanol blending mandate affects the pace and distribution of plant exit. I develop a dynamic model of ethanol plant production and exit in which plant scale and spatial heterogeneity in local corn supply affect production costs and exit incentives. The model predicts geographic differences in the industry shakeout. By 2050, expected production capacity declines by 99.4 percent in North Dakota, compared with 16.6 percent in Iowa, as larger plants in areas with less local corn supply tend to exit earlier. Raising the blend mandate from 10 to 12 percent delays exit by 5.7 years on average. The delay generates \$16.6 billion in ethanol plant and local corn producer surplus, while fuel consumers have to bear \$40.2 billion in additional compliance expenditure. The gains are distributed differently from the exit response. Inframarginal plants receive the largest gains, while plants near the margin of exit experience the largest delays in exit. The higher mandate also preserves local corn demand and shifts a share of the gains toward nearby corn producers.
-          </p>
-
-          <p>
-            <a href="https://drive.google.com/file/d/1fnopIACbI3KGC-nMt4AQJcIOKfGvtlNI/view?usp=share_link"
-               target="_blank"
-               rel="noopener noreferrer">
-              (PDF)
-            </a>
-          </p>
+            This paper studies how the U.S. corn ethanol industry would adjust to a projected decline in gasoline demand and how the ethanol blending mandate affects the pace and distribution of plant exit. I develop a dynamic model of ethanol plant production and exit in which plant scale and spatial heterogeneity in local corn supply affect production costs and exit incentives. The model predicts geographic differences in the industry shakeout. By 2050, expected production capacity declines by 99.4 percent in North Dakota, compared with 16.6 percent in Iowa, as larger plants in areas with less local corn supply tend to exit earlier. Raising the blend mandate from 10 to 12 percent delays exit by 5.7 years on average. The delay generates $16.6 billion in ethanol plant and local corn producer surplus, while fuel consumers have to bear $40.2 billion in additional compliance expenditure. The gains are distributed differently from the exit response. Inframarginal plants receive the largest gains, while plants near the margin of exit experience the largest delays in exit. The higher mandate also preserves local corn demand and shifts a share of the gains toward nearby corn producers.
+            </p>
+          <div class="paper-links"><a href="https://drive.google.com/file/d/1fnopIACbI3KGC-nMt4AQJcIOKfGvtlNI/view?usp=share_link" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
         </div>
 
 
@@ -224,12 +254,11 @@
           <div class="paper-title">
             Interstate Subsidy Competition under the Renewable Fuel Standard and the Blend Wall
           </div>
+          <p class="muted"><em>Draft available upon request</em></p>
           <p class="paper-abstract">
             
-How does declining gasoline demand affect interstate ethanol subsidy competition under the Renewable Fuel Standard and the ethanol blend wall? I develop a multi-market equilibrium model in which state governments choose ethanol production subsidies under federal biofuel mandates and the blend wall, a technical limit on ethanol blending. I derive how the effects of state ethanol subsidies depend on which regulatory constraints bind. When the total renewable mandate binds, subsidies largely crowd out ethanol production in competing states and depress the national ethanol price. As declining gasoline demand makes the blend wall binding, additional ethanol production requires greater gasoline consumption and can displace biodiesel used to satisfy the total renewable mandate when the separate biodiesel mandate is slack. Numerical simulations show that subsidy competition in this regime reduces biodiesel producer surplus while concentrating consumer surplus gains among gasoline consumers. Nash subsidies increase in major ethanol-producing states as gasoline demand declines, even though the resulting competition reduces the collective welfare of major ethanol-exporting states. 
-          </p>
-
-          
+How does declining gasoline demand affect interstate ethanol subsidy competition under the Renewable Fuel Standard and the ethanol blend wall? I develop a multi-market equilibrium model in which state governments choose ethanol production subsidies under federal biofuel mandates and the blend wall, a technical limit on ethanol blending. I derive how the effects of state ethanol subsidies depend on which regulatory constraints bind. When the total renewable mandate binds, subsidies largely crowd out ethanol production in competing states and depress the national ethanol price. As declining gasoline demand makes the blend wall binding, additional ethanol production requires greater gasoline consumption and can displace biodiesel used to satisfy the total renewable mandate when the separate biodiesel mandate is slack. Numerical simulations show that subsidy competition in this regime reduces biodiesel producer surplus while concentrating consumer surplus gains among gasoline consumers. Nash subsidies increase in major ethanol-producing states as gasoline demand declines, even though the resulting competition reduces the collective welfare of major ethanol-exporting states.
+            </p>
         </div>
 
         <div class="mb-4">
@@ -252,19 +281,11 @@ How does declining gasoline demand affect interstate ethanol subsidy competition
         </div>
 
         <div class="mb-4">
-          <div class="paper-title">
-            Analyzing Determinants of Labor Income Share Fluctuations in Korea
-          </div>
+          <div class="paper-title">Analyzing Determinants of Labor Income Share Fluctuations in Korea</div>
           <p class="coauthor">with Sunghyun Henry Kim</p>
             <em>The Korean Journal of Economic Studies</em>, 67(4), 139–171, 2019.
+          <div class="paper-links"><a href="https://doi.org/10.22841/kjes.2019.67.4.005" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> DOI</a></div>
 
-          <p>
-            <a href="https://doi.org/10.22841/kjes.2019.67.4.005"
-               target="_blank"
-               rel="noopener noreferrer">
-              DOI
-            </a>
-          </p>
         </div>
 
       </div>
@@ -277,10 +298,10 @@ How does declining gasoline demand affect interstate ethanol subsidy competition
 <section id="teaching">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-3 section-heading">
+      <div class="col-12 col-lg-2 section-heading">
         <h1>Teaching</h1>
       </div>
-      <div class="col-12 col-lg-9">
+      <div class="col-12 col-lg-10">
         <h3>Iowa State University, Department of Economics</h3>
         <ul class="teaching-list">
           <li><strong>Lab Instructor</strong><br/>
@@ -318,10 +339,10 @@ How does declining gasoline demand affect interstate ethanol subsidy competition
 <section id="contact">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-3 section-heading">
+      <div class="col-12 col-lg-2 section-heading">
         <h1>Contact</h1>
       </div>
-      <div class="col-12 col-lg-9">
+      <div class="col-12 col-lg-10">
         <ul>
           <li>Email: <a href="mailto:hhwang@iastate.edu">hhwang@iastate.edu</a></li>
           <li>Phone: +1 (515) 230-8312</li>
